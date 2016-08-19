@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<tracer module="com.alogic.tracer.StackTracer" enable="true">
+	<logger module="com.alogic.tracer.log.TraceLogger$Hub"
+		report.enable="true" report.cycle="3600000" async="true">
+		
+		<logger module="com.alogic.tracer.log.TraceLogger$Dispatch"
+				report.enable="false" report.cycle="3600000" async="false" threadCnt="1">
+				<logger 
+					module="com.alogic.tracer.log.Log4jTraceLogger"
+					delimeter="|" 
+					billing="false"
+					log4j.file="${tracelog.home}/tracelog_${server.port}_${thread}.log"
+					log4j.datePattern="'.'yyyy-MM-dd" 
+					log4j.encoding="${http.encoding}"
+					log4j.bufferSize="2048" 
+					log4j.bufferedIO="false" 
+					log4j.immediateFlush="true"
+					report.enable="false" 
+					async="false" 
+					async.interval="1000"
+					async.maxQueueLength="4096" />
+		</logger>
+	</logger>
+</tracer>

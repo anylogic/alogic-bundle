@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ac module="com.logicbus.backend.acm.ACMIPAccessController">
+	<model id="default" pwd="Default" maxThread="100000" maxTimesPerMin="10000000" priority="0">
+		<acls>
+			<acl ip="*" service="*" />
+		</acls>
+	</model>
+</ac>

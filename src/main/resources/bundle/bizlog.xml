@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<logger
+	module="com.logicbus.backend.bizlog.BizLogger$Hub"
+	report.enable="true" 
+	report.cycle="3600000"
+	async="true"
+>
+	<logger 
+		module="com.logicbus.backend.bizlog.BizLogger$Dispatch" 
+		report.enable="true" 
+		report.cycle="3600000"
+		async="false"
+		threadCnt="1"
+	>
+		<logger 
+			module="com.logicbus.backend.bizlog.Log4jBizLogger"
+			delimeter="%%"
+			billing="true"
+			log4j.file="${bizlog.home}/bizlog${server.port}_${thread}.log"
+			log4j.datePattern="'.'yyyy-MM-dd"
+			log4j.encoding="${http.encoding}"
+			log4j.bufferSize="10240"
+			log4j.bufferedIO="false"
+			log4j.immediateFlush="true"
+			
+			report.enable="false"
+			
+			async="true"
+			async.interval="10000"
+			async.maxQueueLength="4096"
+		/>
+	</logger>
+</logger>
