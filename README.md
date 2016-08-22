@@ -17,8 +17,8 @@ alogic-bundle所包含的配置文件如下：
 | [tracer.xml](src/main/resources/bundle/tracer.xml) | 缺省的trace日志配置文件，可通过trace.master重定义 |
 | [metrics.handler.client.xml](src/main/resources/bundle/metrics.handler.client.xml) | 缺省的指标处理配置文件，可通过metrics.handler.client.master重定义 |
 | [component-blob.xml](src/main/resources/bundle/component-blob.xml) | 缺省的blob配置文件，可通过blob.master重定义 |
-| [web.addons.xml](src/main/resources/web.addons.xml) | 缺省的web.xml扩展文件，可通过webcontext.addons重定义 |
-| [servant.config.xml](src/main/resources/servant.config.xml) | 缺省的服务目录配置文件，可通过servant.config.master重定义 |
+| [web.addons.xml](src/main/resources/bundle/web.addons.xml) | 缺省的web.xml扩展文件，可通过webcontext.addons重定义 |
+| [servant.config.xml](src/main/resources/bundle/servant.config.xml) | 缺省的服务目录配置文件，可通过servant.config.master重定义 |
 
 ### Getting started
 
